@@ -1,5 +1,6 @@
 package com.base;
 
+import lombok.Getter;
 import org.reflections.Reflections;
 
 import java.util.Map;
@@ -7,6 +8,7 @@ import java.util.Set;
 
 public class JavaConfig implements Config{
 
+    @Getter
     private Reflections scanner; //подтянули зависимость в мавен
     private Map<Class, Class> ifc2ImplClass;
 

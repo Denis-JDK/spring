@@ -1,6 +1,7 @@
 package com.base;
 
 public class CoronaDesinfector {
+
     private Announcer announcer = ObjectFactory.getInstance().createObject(Announcer.class);
     private Policeman policeman = ObjectFactory.getInstance().createObject(Policeman.class);
 
