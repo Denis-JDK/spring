@@ -2,16 +2,19 @@ package com.base;
 
 import lombok.SneakyThrows;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ObjectFactory {
     private static ObjectFactory ourInstance = new ObjectFactory();
-    private Config config = new JavaConfig("com.base");
+    private Config config;
 
     public static ObjectFactory getInstance(){
         return ourInstance;
     }
 
     private ObjectFactory(){
-
+        new JavaConfig("com.base", new HashMap<>(Map.of(Policeman.class, AngryPoliceman.class)));
     }
 
     @SneakyThrows
