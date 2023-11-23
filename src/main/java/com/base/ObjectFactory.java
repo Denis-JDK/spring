@@ -13,7 +13,7 @@ public class ObjectFactory {
         return ourInstance;
     }
 
-    private ObjectFactory(){
+    private ObjectFactory(){ //настройка не в коде а как бы в конфигурации которую мы можем передавать на исполнение с разной имплементацией интерфейса policeman
       config =  new JavaConfig("com.base", new HashMap<>(Map.of(Policeman.class, AngryPoliceman.class)));
     }
 

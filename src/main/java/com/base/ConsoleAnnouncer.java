@@ -1,7 +1,11 @@
 package com.base;
 
 public class ConsoleAnnouncer implements Announcer {
-    public void announce(String s) {
-        System.out.println(s);
+
+    private Recommendator recommendator = ObjectFactory.getInstance().createObject(Recommendator.class);
+    @Override
+    public void announce(String message) {
+        System.out.println(message);
+        recommendator.recommend();
     }
 }
